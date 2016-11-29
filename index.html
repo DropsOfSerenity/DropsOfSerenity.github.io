@@ -1,0 +1,438 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700,800,400,300,300italic" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            background: #121212;
+            color: white;
+        }
+
+        canvas {
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        h1, h2, h3 {
+            text-transform: uppercase;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 46px;
+            letter-spacing: 5px;
+        }
+
+        h2 {
+            letter-spacing: 1px;
+            font-size: 16px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        #content {
+            width: 100%;
+            margin: 1em 0 0 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 2;
+            text-align: center;
+        }
+
+        #content h1 {
+            margin-top: 5em;
+            font-weight: 800;
+        }
+
+        #content h2 {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 5px 0;
+        }
+
+        #content h3 {
+            color: rgba(255, 255, 255, 1);
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 1px;
+            line-height: 1em;
+            margin-bottom: 8px;
+        }
+
+        .screenshot {
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .section-heading {
+            margin-bottom: 48px;
+        }
+
+        #content .section-heading > h1 {
+            color: #FFE95F;
+            font-weight: 300;
+            letter-spacing: 2px;
+            font-size: 36px;
+            margin-bottom: 16px;
+            margin-top: 0;
+        }
+
+        #content a {
+            color: #FFE95F;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #content a:hover {
+            color: #FFCF45;
+        }
+
+        .circular-image {
+            border: 1px solid rgba(255, 255, 255, .3);
+            margin: 16px;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50%;
+            border-radius: 50%;
+            width: 128px;
+            height: 128px;
+        }
+
+        .year {
+            color: rgba(255, 255, 255, .5);
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .game h3 {
+            text-align: left;
+            font-weight: bold !important;
+        }
+
+        .game h3 span.year {
+            float: right;
+        }
+
+
+        #websites p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        ul.technologies {
+            list-style: none;
+        }
+        ul.technologies li {
+            display: inline-block;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 16px 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        div.columns {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+
+        div.section {
+            min-width: 320px;
+            max-width: 1024px;
+            margin: 0 auto;
+            padding-top: 64px;
+            display: block;
+        }
+
+        div.columns-1 {
+            width: 320px;
+        }
+
+        div.columns-2 {
+            width: 640px;
+        }
+
+        div.columns-3 {
+            width: 960px;
+        }
+
+        div.column-box {
+            text-align: left;
+            width: 288px;
+            float: left;
+            padding: 0 16px 16px 16px;
+        }
+
+        div.columns-1 div.column-box,
+        div.columns-2 div.column-box:nth-child(2n+1),
+        div.columns-3 div.column-box:nth-child(3n+1) {
+            clear: left;
+        }
+
+        div.column-3-2,
+        div.column-3-1-2 {
+            float: left;
+            padding: 0 20px 32px 20px;
+            width: 280px;
+        }
+
+        div.columns-2 div.column-3-2,
+        div.columns-3 div.column-3-2,
+        div.columns-2 div.column-3-1-2 {
+            width: 600px;
+        }
+
+        div.columns-1 h1 {
+            margin-top: 3em;
+            background-size: 280px 40px;
+            height: 60px;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            margin: 64px 0 0 0;
+        }
+        footer p {
+            color: #aaa;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<canvas id="background"></canvas>
+
+<div id="content">
+
+    <div id="head" class="columns columns-3">
+        <h1>Justin Schiff</h1>
+        <h2>
+            I make games, websites, programs, and art.
+        </h2>
+        <h2>
+            Check out my <a target="_blank" href="https://github.com/dropsofserenity">Github</a> or
+            send me an <a href="mailto:AmbientRevolution@gmail.com">Email</a>
+        </h2>
+    </div>
+
+    <div id="games" class="section">
+        <div class="section-heading">
+            <h1>Games</h1>
+            <h2>In Progress and completed games</h2>
+        </div>
+
+        <div class="section-content columns columns-2">
+            <div class="column-box game">
+                <h3>Pili <span class="year">TBA</span></h3>
+                <img class="screenshot" src="/images/pili.png">
+                <p>
+                    An inquisitive little creature after leaving her forest home, explores the curious beliefs of her
+                    people and discovers more about the world she inhabits.
+                </p>
+            </div>
+
+            <div class="column-box game">
+                <h3>Space Shooter <span class="year">TBA</span></h3>
+                <img class="screenshot" src="/images/shooter.png">
+                <p>
+                    Experimenting with bullet hell mechanics, with game mechanics I'm working on inspired from Raiden
+                    and Galaga.
+                </p>
+            </div>
+
+            <div class="column-box game">
+                <h3>Ludum Dare 36 <span class="year">2016</span></h3>
+                <img class="screenshot" src="/images/what.png">
+                <p>
+                    Ludum Dare 36 had the theme &quot;Ancient Technology&quot; I wasn't able to finish within 48 hours
+                    but I got pretty far with a basic little platformer.
+                </p>
+            </div>
+
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div id="websites" class="section">
+        <div class="section-heading">
+            <h1>Website dev and design</h1>
+            <h2>Personal and commercial website projects.</h2>
+        </div>
+
+        <div class="section-content columns columns-2">
+            <p>In my professional life I've been coding websites/apps for clients since 2012 and programming for much longer, using technologies such as:</p>
+            <ul class="technologies">
+                <li>Rails/Ruby</li>
+                <li>Django/Python</li>
+                <li>Phoenix/Elixir</li>
+                <li>jQuery</li>
+                <li>AngularJS</li>
+                <li>React</li>
+                <li>Canvas</li>
+            </ul>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+    <div id="art" class="section">
+        <div class="section-heading">
+            <h1>Art</h1>
+            <h2>Doodlings of an aspiring artist.<br>I love drawing traditional and pixel art.</h2>
+        </div>
+
+        <div class="section-content columns columns-2">
+            <div style="background-image: url(/images/art/1.png)" class="circular-image"></div>
+            <div style="background-image: url(/images/art/2.png)" class="circular-image"></div>
+            <div style="background-image: url(/images/art/3.png)" class="circular-image"></div>
+            <div style="background-image: url(/images/art/4.png)" class="circular-image"></div>
+            <div style="background-image: url(/images/art/5.jpg)" class="circular-image"></div>
+
+            <div style="background-image: url(/images/art/p1.gif)" class="circular-image"></div>
+            <div style="background-image: url(/images/art/p2.png)" class="circular-image"></div>
+            <div style="background-image: url(/images/art/p3.gif)" class="circular-image"></div>
+            <div style="background-image: url(/images/art/p4.png)" class="circular-image"></div>
+            <div style="background-image: url(/images/art/p5.png)" class="circular-image"></div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+
+    <footer>
+        <p>Copywrong Whenever, Justin Schiff</p>
+    </footer>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+<script type="text/javascript">
+    (function (window) {
+        "use strict";
+
+        var canvas = document.getElementById('background');
+        var context;
+        var offCtx;
+
+        var mouse = {x: 0, y: 0, cx: 0, cy: 0};
+        document.addEventListener('mousemove', function (ev) {
+            mouse.x = ev.clientX;
+            mouse.y = ev.clientY;
+        }, false);
+        var particles = [];
+
+        Number.prototype.clamp = function (min, max) {
+            return Math.min(Math.max(this, min), max);
+        };
+
+        var regenerateParticles = function () {
+            particles = [];
+            for (var y = 0; y < canvas.height; y += 20) {
+                for (var x = 0; x < canvas.width; x += 20) {
+                    particles.push({
+                        originalPosition: {x: x, y: y},
+                        position: {x: x, y: y},
+                        fillColor: '#' + (Math.random() * 0x404040 + 0xaaaaaa | 0).toString(16),
+                        radius: Math.random() * 7,
+                        growth: Math.round(Math.random())
+                    })
+                }
+            }
+        };
+
+        var onResize = function () {
+            // Set the first section margin so that the intro is on the screen alone
+            var section = $('.section:first');
+            var head = $('#head');
+            var sectionWidth = section.width();
+            var windowHeight = $(window).height();
+
+            section.css('margin-top', $(window).height() - head.height() - head.offset().top);
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            context = canvas.getContext('2d');
+            context.fillStyle = '#121212';
+            context.fillRect(0, 0, canvas.width, canvas.height);
+
+            var off = document.createElement('canvas');
+            off.width = window.innerWidth;
+            off.height = window.innerHeight;
+            offCtx = off.getContext('2d');
+
+            regenerateParticles();
+        };
+
+        onResize();
+        $(window).resize(onResize);
+        regenerateParticles();
+
+        var frame = 0;
+        var draw = function () {
+            frame++;
+
+            offCtx.fillStyle = '#121212';
+            offCtx.fillRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(function (p) {
+                var mouseratiox = (mouse.x / canvas.width) - .5;
+                var mouseratioy = (mouse.y / canvas.height) - .5;
+                p.position.x = p.originalPosition.x - (mouseratiox * 15);
+                p.position.y = p.originalPosition.y - (mouseratioy * 15);
+
+                if (p.growth == 1) {
+                    p.radius += Math.random() / 2;
+                    if (p.radius > 7) {
+                        p.growth = 0;
+                        p.radius = 7;
+                    }
+                } else {
+                    p.radius -= Math.random() / 2;
+                    if (p.radius < 0) {
+                        p.growth = 1;
+                        p.radius = 0;
+                    }
+                }
+
+                offCtx.beginPath();
+                offCtx.moveTo(p.position.x, p.position.y);
+                offCtx.arc(p.position.x, p.position.y, p.radius, 0, 2 * Math.PI, false);
+                offCtx.fillStyle = '#171717';
+                offCtx.fill();
+            });
+
+            var offData = offCtx.getImageData(0, 0, canvas.width, canvas.height);
+            context.putImageData(offData, 0, 0);
+
+            window.requestAnimationFrame(draw);
+        };
+
+        draw();
+
+    }(window));
+</script>
+
+</body>
+
+</html>
